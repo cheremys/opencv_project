@@ -53,8 +53,9 @@ with open("coco.names", "r") as f:
 layer_names = net.getUnconnectedOutLayersNames()
 
 # Open webcam
-cap = cv2.VideoCapture(1)  # 0 = default webcam 1 = IPhone webcam
-
+#cap = cv2.VideoCapture(1)  # 0 = default webcam 1 = IPhone webcam
+# Open video file
+cap = cv2.VideoCapture("video1.mp4")
 while True:
     ret, frame = cap.read()
     if not ret:
